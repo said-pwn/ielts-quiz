@@ -62,7 +62,7 @@ export default function Quiz() {
   return (
     <div className="max-w-xl mx-auto">
       <select
-        className="mb-6 p-2 rounded border border-gray-300 w-full"
+        className="mb-6 p-2 rounded border border-black bg-black w-full"
         value={selectedCategory}
         onChange={(e) => {
           setSelectedCategory(e.target.value);

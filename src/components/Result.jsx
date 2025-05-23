@@ -4,7 +4,7 @@ export default function Result({ score, total, onRestart }) {
     percent >= 80 ? "C1" : percent >= 60 ? "B2" : "B1 or lower";
 
   return (
-    <div className="bg-green-100 p-8 rounded-xl text-center max-w-xl mx-auto">
+    <div className="bg-green-800 p-8 rounded-xl text-center max-w-xl mx-auto">
       <h2 className="text-3xl font-bold mb-4">Quiz Finished!</h2>
       <p className="text-lg mb-2">
         Your Score: <strong>{score} / {total}</strong>

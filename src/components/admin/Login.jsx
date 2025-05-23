@@ -18,7 +18,7 @@ export default function Login({ onLogin }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-sm mx-auto mt-10 p-6 bg-white rounded shadow"
+      className="max-w-sm mx-auto mt-10 p-6 bg-black  shadow"
     >
       <h2 className="text-xl mb-4">Admin panel authentication</h2>
       <input
@@ -30,7 +30,7 @@ export default function Login({ onLogin }) {
       />
       <button
         type="submit"
-        className=" bg-gray-600 text-white p-2  hover:bg-blue-700"
+        className=" bg-gray-600 text-white p-2 "
       >
         Войти
       </button>

@@ -16,13 +16,14 @@ function App() {
   const [isAdmin, setIsAdmin] = useState(false);
 
   return (
+    <div className="bg-gray-900 min-h-screen text-white">
     <Router>
     {/* <Link to="/soon" className="fixed top-10 right-4 bg-blue-500 text-white px-4 py-2 rounded"/> */}
     <Link to="/" className="fixed top-4 right-4 bg-blue-500 text-white px-4 py-2 rounded">Home</Link>
     <Link to="/admin" className="fixed top-5 right-50 bg-blue-500 text-white px-4 py-2 rounded">Admin</Link>
       <div className="p-6">
       <h1 className=" text-2xl pt-10">IELTS QUIZ</h1>
-      <h1 className=" text-1xl border-7 bg-black text-white p-3 m-10">The website is under development.</h1>
+      <h1 className=" text-1xl border-black bg-black text-white p-3 m-10">The website is under development.</h1>
         <Routes>
           <Route path="/" element={<Quiz />} />
           <Route path="/quiz" element={<Quiz />} />
@@ -51,6 +52,7 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </div>
   );
 }
 

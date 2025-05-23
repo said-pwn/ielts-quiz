@@ -20,7 +20,7 @@ export default function UsersTable() {
   return (
     <table className="w-full border-collapse border">
       <thead>
-        <tr className="bg-gray-200">
+        <tr className="bg-black">
           <th className="border p-2">Users</th>
           <th className="border p-2">Score</th>
           <th className="border p-2">Date</th>
@@ -28,7 +28,7 @@ export default function UsersTable() {
       </thead>
       <tbody>
         {users.map(({ id, username, score, date }) => (
-          <tr key={id} className="odd:bg-white even:bg-gray-50">
+          <tr key={id} className="odd:bg-black even:bg-black">
             <td className="border p-2">{username}</td>
             <td className="border p-2">{score}</td>
             <td className="border p-2">{new Date(date).toLocaleString()}</td>

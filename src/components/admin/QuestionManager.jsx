@@ -80,7 +80,7 @@ export default function QuestionsManager() {
 
   return (
     <div>
-      <form onSubmit={handleSave} className="mb-6 p-4 bg-white rounded shadow">
+      <form onSubmit={handleSave} className="mb-6 p-4 bg-black rounded shadow">
         <h3 className="text-xl mb-3">{editing ? "Edit" : "Add"} Question</h3>
         <input
           type="text"
@@ -131,7 +131,7 @@ export default function QuestionsManager() {
         </label>
         <button
           type="submit"
-          className="bg-amber-500 hover:bg-red-600 text-white px-4 py-2  mr-3"
+          className="bg-amber-500 hover:bg-red-600 text-black px-4 py-2  mr-3"
         >
           {editing ? "save" : "add"}
         </button>
@@ -148,7 +148,7 @@ export default function QuestionsManager() {
 
       <table className="w-full border-collapse border">
         <thead>
-          <tr className="bg-gray-200">
+          <tr className="bg-black">
             <th className="border p-2">Вопрос</th>
             <th className="border p-2">Категория</th>
             <th className="border p-2">Правильный ответ</th>
@@ -157,20 +157,20 @@ export default function QuestionsManager() {
         </thead>
         <tbody>
           {questions.map(q => (
-            <tr key={q.id} className="odd:bg-white even:bg-gray-50">
+            <tr key={q.id} className="odd:bg-black even:bg-black">
               <td className="border p-2">{q.question}</td>
               <td className="border p-2">{q.category}</td>
               <td className="border p-2">{q.options[q.correctIndex]}</td>
               <td className="border p-2 space-x-2">
                 <button
                   onClick={() => handleEdit(q)}
-                  className="bg-gray-400 px-3 py-1  " 
+                  className="bg-orange-500 text-white px-3 py-1 " 
 >
 edit
 </button>
 <button
 onClick={() => handleDelete(q.id)}
-className="bg-gray-500 px-3 py-1  text-white "
+className="bg-red-700 px-3 py-1  text-white "
 >
 delete
 </button>
