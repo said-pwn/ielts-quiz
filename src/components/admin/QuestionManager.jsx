@@ -70,22 +70,22 @@ export default function QuestionsManager() {
   }
 
   function handleDelete(id) {
-    if (!confirm("Удалить вопрос?")) return;
+    if (!confirm("delete question?")) return;
     fetch(`${apiUrl}/${id}`, { method: "DELETE" }).then(() => {
       setQuestions(q => q.filter(item => item.id !== id));
     });
   }
 
-  if (loading) return <p>Загрузка вопросов...</p>;
+  if (loading) return <p>Loading Questions...</p>;
 
   return (
     <div>
       <form onSubmit={handleSave} className="mb-6 p-4 bg-white rounded shadow">
-        <h3 className="text-xl mb-3">{editing ? "Редактировать" : "Добавить"} вопрос</h3>
+        <h3 className="text-xl mb-3">{editing ? "Edit" : "Add"} Question</h3>
         <input
           type="text"
           name="question"
-          placeholder="Вопрос"
+          placeholder="Question"
           className="w-full mb-2 p-2 border rounded"
           value={form.question}
           onChange={handleChange}
@@ -95,7 +95,7 @@ export default function QuestionsManager() {
           <input
             key={i}
             type="text"
-            placeholder={`Опция ${i + 1}`}
+            placeholder={`Option ${i + 1}`}
             className="w-full mb-2 p-2 border rounded"
             value={opt}
             onChange={e => handleOptionChange(i, e.target.value)}
@@ -103,7 +103,7 @@ export default function QuestionsManager() {
           />
         ))}
         <label className="block mb-2">
-          Правильный ответ:
+          correct answer:
           <select
             name="correctIndex"
             value={form.correctIndex}
@@ -116,7 +116,7 @@ export default function QuestionsManager() {
           </select>
         </label>
         <label className="block mb-4">
-          Категория:
+          Kategory:
           <select
             name="category"
             value={form.category}
@@ -131,7 +131,7 @@ export default function QuestionsManager() {
         </label>
         <button
           type="submit"
-          className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded mr-3"
+          className="bg-green-500 hover:bg-red-600 text-white px-4 py-2 rounded mr-3"
         >
           {editing ? "Сохранить" : "Добавить"}
         </button>
@@ -166,13 +166,13 @@ export default function QuestionsManager() {
                   onClick={() => handleEdit(q)}
                   className="bg-yellow-400 px-3 py-1 rounded hover:bg-yellow-500"
 >
-✏️
+
 </button>
 <button
 onClick={() => handleDelete(q.id)}
 className="bg-red-500 px-3 py-1 rounded text-white hover:bg-red-600"
 >
-🗑️
+
 </button>
 </td>
 </tr>

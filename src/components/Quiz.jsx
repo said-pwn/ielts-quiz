@@ -12,7 +12,7 @@ export default function Quiz() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   useEffect(() => {
-    fetch("https://6830b9356205ab0d6c3a379f.mockapi.io/ielts-quiz") // Заменить на свой URL MockAPI
+    fetch("https://6830b9356205ab0d6c3a379f.mockapi.io/ielts-quiz") 
       .then((res) => res.json())
       .then((data) => setQuestions(data))
       .catch((err) => console.error(err));
