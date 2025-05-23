@@ -22,7 +22,7 @@ function App() {
     <Link to="/admin" className="fixed top-5 right-50 bg-blue-500 text-white px-4 py-2 rounded">Admin</Link>
       <div className="p-6">
       <h1 className=" text-2xl pt-10">IELTS QUIZ</h1>
-      <h1 className=" text-1xl border-7 bg-black text-white p-3 m-10">The website is currently under development.</h1>
+      <h1 className=" text-1xl border-7 bg-black text-white p-3 m-10">The website is under development.</h1>
         <Routes>
           <Route path="/" element={<Quiz />} />
           <Route path="/quiz" element={<Quiz />} />
